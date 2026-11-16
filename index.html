@@ -11,7 +11,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Web Dominators", "slogan": "Grow. Engage. Dominate.", "founder": {"@type": "Person", "name": "Rohit Mehmi"}, "description": "Digital marketing agency offering SEO, social media marketing, paid advertising and web design.", "url": "https://www.example.com/"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a digital marketing agency do?", "acceptedAnswer": {"@type": "Answer", "text": "A digital marketing agency plans and runs the online channels that bring customers to your business, including SEO, content, paid ads, social media, email and website design. Web Dominators handles strategy, execution and reporting in one place."}}, {"@type": "Question", "name": "How long does SEO take to show results?", "acceptedAnswer": {"@type": "Answer", "text": "Most websites see early improvements in 3 to 4 months, with stronger ranking and traffic growth after 6 to 12 months. Timelines depend on competition, site health and how much content is needed."}}, {"@type": "Question", "name": "How much does digital marketing cost?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing depends on the services, the size of your market and your goals. After a free consultation we send a clear proposal with scope and monthly cost, so there are no surprise fees."}}, {"@type": "Question", "name": "Do you offer a free consultation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We review your website and current marketing, then share quick wins and a recommended plan. There is no obligation to continue with us."}}, {"@type": "Question", "name": "Which industries do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "We work with e-commerce, SaaS, healthcare, education, real estate and local service businesses, and we tailor each strategy to the way your customers search and buy."}}, {"@type": "Question", "name": "How will I know if my campaigns are working?", "acceptedAnswer": {"@type": "Answer", "text": "You receive a monthly report covering traffic, leads, conversions and cost, and you can ask us for live dashboard access. Each number is tied back to the goals we set together."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--o:#FFA20F;--o2:#F28A00;--ink:#14110d;--mut:#6b655c;--bg:#fffaf3;--card:#fff;--line:#f1e4cf;--r:18px}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -261,7 +261,7 @@ nav ul>li>a:hover:after{width:calc(100% - 40px)}
 .fd{margin:-8px 0 20px!important;font-size:12.5px!important;color:#cfc3ac!important}
 .fd b{color:#fff;font-weight:600}
 @media(max-width:980px){
- .nav{grid-template-columns:1fr auto}.burger{justify-self:end}
+ .nav{grid-template-columns:1fr auto}.nav>.logo,.nav>nav{grid-column:1;grid-row:1}.burger{justify-self:end;grid-column:2;grid-row:1}
  nav ul>li>a{display:flex;justify-content:space-between;padding:14px 0;font-size:14px}
  nav li{padding:0!important}
  nav ul>li>a:after{display:none}
@@ -274,7 +274,83 @@ nav ul>li>a:hover:after{width:calc(100% - 40px)}
 .cta{overflow:visible;background:linear-gradient(180deg,rgba(18,14,9,0),#120e09 60px);padding:230px 0 26px}
 .cta canvas{top:-90px;height:560px;width:100%;-webkit-mask-image:none;mask-image:none;pointer-events:none}
 @media(max-width:640px){.cta canvas{height:480px}}
+
+/* ===== HERO (user-provided design, ported to plain CSS) ===== */
+.hx{padding:0;position:relative;width:100%;background:#FDFBF7;overflow:hidden;font-family:'Inter',sans-serif;color:#0F0F0F}
+.hx-stage{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:0;padding-top:78px;overflow:hidden;
+ background:radial-gradient(circle at 76% 36%,rgba(246,200,108,.22) 0%,rgba(244,187,82,.08) 45%,transparent 76%),radial-gradient(circle at 32% 72%,rgba(245,208,138,.14) 0%,transparent 58%),radial-gradient(circle at 18% 22%,rgba(255,255,255,.95) 0%,transparent 55%),linear-gradient(180deg,#FDFBF7 0%,#FAF5EC 100%)}
+.hx-line{display:none;position:absolute;top:0;bottom:0;left:43.1%;width:1px;background:linear-gradient(to bottom,rgba(15,15,15,.03),rgba(15,15,15,.055) 45%,rgba(15,15,15,.015));pointer-events:none;z-index:1}
+.hx-plume{position:absolute;left:-4%;top:8%;width:58%;height:92%;background:radial-gradient(ellipse at 52% 58%,rgba(244,232,212,.65) 0%,rgba(253,251,247,0) 70%);transform:rotate(-18deg);pointer-events:none;z-index:1}
+#silkWaveCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hx-main{position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;padding:40px 24px 0}
+.hx-art{position:relative;z-index:2;height:clamp(270px,76vw,500px);margin-top:clamp(-130px,-13vw,-44px);pointer-events:none}
+.hx-copy{width:100%}
+.hx-eye{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.hx-eye span{width:20px;height:2px;background:#F5A623;border-radius:9px}
+.hx-eye b{font-size:11px;font-weight:700;letter-spacing:.09em;color:#1E1E1E}
+.hx-h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:42px;color:#0D0D0D;line-height:1.06;letter-spacing:-.03em;margin-bottom:20px}
+.hx-h1 span{display:block}
+.hx-h1 .hx-or{color:#F5A823}
+.hx-p{font-size:15px;color:#2B2B2B;line-height:1.58;max-width:490px;margin-bottom:32px}
+.hx-br{display:none}
+.hx-btns{display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+.hx-gold{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;background:#F6AE22;color:#0F0F0F;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;padding:14px 24px;border-radius:8px;box-shadow:0 6px 18px -4px rgba(245,166,35,.45);transition:all .35s cubic-bezier(.16,1,.3,1)}
+.hx-gold:before{content:"";position:absolute;top:0;left:-120%;width:70%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.42) 50%,transparent);transition:left .65s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.hx-gold:hover:before{left:140%}
+.hx-gold:hover{background:#EDA112;transform:translateY(-2px);box-shadow:0 12px 26px -4px rgba(245,166,35,.58)}
+.hx-gold:active{transform:none}
+.hx-ar{width:14px;height:14px;transition:transform .3s}
+.hx-gold:hover .hx-ar{transform:translate(2px,-2px)}
+.hx-learn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:6px 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#0F0F0F}
+.hx-learn i{width:19px;height:19px;border-radius:50%;border:1.5px solid #1A1A1A;display:grid;place-items:center;transition:transform .3s,background .3s,color .3s}
+.hx-learn i svg{width:10px;height:10px}
+.hx-learn:hover i{transform:translateX(2px);background:#0F0F0F;color:#fff}
+.hx-learn u{position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:rgba(226,194,133,.7);transition:background .3s}
+.hx-learn:hover u{background:#F5A623}
+.hx-story{position:absolute;z-index:20;right:6%;bottom:13%;pointer-events:auto}
+.hx-sb{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:14px;animation:hxFloat 5.5s ease-in-out infinite}
+.hx-sb:focus-visible{outline:2px solid #F5A623;outline-offset:6px;border-radius:12px}
+.hx-pp{position:relative;width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.38);display:grid;place-items:center;color:#2C1804;transition:transform .3s}
+.hx-pp svg{width:14px;height:14px;margin-left:2px}
+.hx-pp:before,.hx-pp:after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(255,243,200,.48);animation:hxRing 3.2s cubic-bezier(.215,.61,.355,1) infinite;pointer-events:none}
+.hx-pp:after{animation-delay:1.6s}
+.hx-sb:hover .hx-pp{transform:scale(1.1)}
+.hx-sb em{font-style:normal;font-size:14px;color:rgba(255,255,255,.95);text-shadow:0 2px 6px rgba(0,0,0,.75);letter-spacing:.02em;transition:color .3s}
+.hx-sb{padding:6px 16px 6px 6px;border-radius:999px;background:rgba(24,16,6,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hx.nogl .hx-sb{background:rgba(255,255,255,.75)}
+@keyframes hxFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes hxRing{0%{transform:scale(.92);opacity:.8}100%{transform:scale(1.52);opacity:0}}
+.hx-ru{opacity:0;transform:translateY(18px);animation:hxUp .8s cubic-bezier(.16,1,.3,1) forwards}
+.hx-ru.d1{animation-delay:.06s}.hx-ru.d2{animation-delay:.14s}.hx-ru.d3{animation-delay:.22s}.hx-ru.d4{animation-delay:.3s}.hx-ru.d5{animation-delay:.38s}.hx-ru.d6{animation-delay:.46s}
+@keyframes hxUp{to{opacity:1;transform:none}}
+.hx-stats{position:relative;z-index:20;background:rgba(250,247,242,.95);border-top:1px solid rgba(0,0,0,.06);padding:28px 24px}
+.hx-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px 16px;align-items:center}
+.hx-st{position:relative;display:flex;align-items:center;justify-content:flex-start;gap:16px;padding:0 8px}
+.hx-st>svg{width:40px;height:40px;flex:none}
+.hx-st b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:26px;line-height:1.15;letter-spacing:-.01em;color:#0F0F0F}
+.hx-st small{display:block;font-size:13px;color:#68655F;font-weight:500;margin-top:2px}
+.hx-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);padding:16px;opacity:0;transition:opacity .3s}
+.hx-modal.on{display:flex}.hx-modal.show{opacity:1}
+.hx-mc{width:100%;max-width:672px;background:#14120E;border:1px solid rgba(245,158,11,.3);border-radius:16px;padding:28px;color:#fff;transform:scale(.95);transition:transform .3s}
+.hx-modal.show .hx-mc{transform:none}
+.hx-mh{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.hx-mh h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:19px;color:#FBBF24}
+.hx-mh button{all:unset;cursor:pointer;font-size:26px;line-height:1;padding:2px 10px;border-radius:8px;color:rgba(255,255,255,.6)}
+.hx-mh button:hover{color:#fff;background:rgba(255,255,255,.1)}
+.hx-vid{margin-top:28px;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,#2A1B05,#140E04 50%,#3D2604);border:1px solid rgba(245,158,11,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.hx-vid span{width:64px;height:64px;border-radius:50%;background:rgba(245,158,11,.2);border:1px solid rgba(251,191,36,.5);display:grid;place-items:center;color:#FBBF24;margin-bottom:16px}
+.hx-vid span svg{width:28px;height:28px;margin-left:4px}
+.hx-vid p{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:22px;margin-bottom:8px}
+.hx-vid small{font-size:13.5px;color:rgba(254,243,199,.7);max-width:420px}
+@media(min-width:640px){.hx-main{padding:56px 40px 0}.hx-eye b{font-size:11.5px}.hx-h1{font-size:56px;margin-bottom:24px}.hx-p{font-size:16.5px;margin-bottom:36px}.hx-br{display:inline}.hx-btns{gap:28px}.hx-gold{font-size:14.5px;padding:15px 28px}.hx-learn{font-size:14.5px}.hx-pp{width:46px;height:46px}.hx-sb em{font-size:14.5px}.hx-stats{padding:32px 40px}.hx-st b{font-size:31px}.hx-st small{font-size:13.5px}}
+@media(min-width:768px){.hx-h1{font-size:64px}.hx-grid{grid-template-columns:repeat(4,1fr)}.hx-st{justify-content:center}.hx-st:not(:last-child):after{content:"";position:absolute;right:0;top:16%;height:68%;width:1px;background:rgba(15,15,15,.08)}}
+@media(min-width:1024px){.hx-stage{min-height:728px}.hx-line{display:block}.hx-art{position:absolute;inset:0;height:auto;margin-top:0}.hx-main{position:relative;flex:1;flex-direction:row;align-items:center;justify-content:flex-start;padding:24px max(80px,calc((100vw - 1180px)/2 + 28px)) 64px}.hx-copy{width:58%}.hx-h1{font-size:clamp(50px,5.2vw,68px)}.hx-story{right:max(6.5%,calc((100vw - 1180px)/2 + 28px));top:58%;bottom:auto}.hx-sb{padding:0;border-radius:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none}.hx.nogl .hx-sb{background:none}.hx-sb:hover em{color:#FDE68A}.hx-stats{padding:32px 28px}}
+@media(min-width:1280px){.hx-copy{width:54%}}
+.hx.nogl .hx-sb em{color:#3b2a10!important;text-shadow:none!important}
+@media(max-width:420px){.hx-btns{gap:18px}.hx-gold{padding:13px 20px}.hx-st{gap:12px;padding:0}.hx-st>svg{width:34px;height:34px}.hx-st b{font-size:24px}.hx-st small{font-size:12px}.hx-sb em{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.hx-ru{opacity:1;transform:none;animation:none}.hx-sb,.hx-pp:before,.hx-pp:after{animation:none}}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 <canvas id="bgc" aria-hidden="true"></canvas>
@@ -296,28 +372,37 @@ nav ul>li>a:hover:after{width:calc(100% - 40px)}
 </div></header>
 
 <main>
-<div class="hero" id="home">
- <canvas id="c1"></canvas>
- <div class="wrap">
-  <div class="eyebrow or" style="color:#7a5410">DIGITAL MARKETING AGENCY</div>
-  <h1>Turn Your<br>Vision Into <span class="or">Digital Success.</span></h1>
-  <p>We help brands grow with innovative strategies, creative campaigns and performance-driven solutions.</p>
-  <div class="row">
-   <a href="#contact" class="btn p">Start a Project <svg class="i"><use href="#ar"/></svg></a>
-   <a href="#about" class="btn g">Learn More <svg class="i" style="font-size:18px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M13 8l4 4-4 4"/></svg></a>
+<section class="hx" id="home">
+ <div class="hx-stage">
+  <div class="hx-line"></div><div class="hx-plume"></div>
+  <div class="hx-main">
+   <div class="hx-copy">
+    <div class="hx-eye hx-ru d1"><span></span><b>DIGITAL MARKETING AGENCY</b></div>
+    <h1 class="hx-h1"><span class="hx-ru d2">Turn Your</span><span class="hx-ru d3">Vision Into</span><span class="hx-ru d4 hx-or">Digital Success.</span></h1>
+    <p class="hx-p hx-ru d5">We help brands grow with innovative strategies, <br class="hx-br">creative campaigns and performance-driven solutions.</p>
+    <div class="hx-btns hx-ru d6">
+     <a href="#contact" class="hx-gold"><span>Start a Project</span><svg class="hx-ar" viewBox="0 0 14 14" fill="none"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+     <a href="#about" class="hx-learn"><span>Learn More</span><i><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M9.5 6L6.5 3M9.5 6L6.5 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i><u></u></a>
+    </div>
+   </div>
+  </div>
+  <div class="hx-art"><canvas id="silkWaveCanvas"></canvas>
+   <div class="hx-story hx-ru d6">
+    <button type="button" id="watchStoryBtn" class="hx-sb"><span class="hx-pp"><svg viewBox="0 0 16 16" fill="none"><path d="M4.8 3.2L12.4 8L4.8 12.8V3.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><em>Watch Our Story</em></button>
+   </div>
   </div>
  </div>
- <div class="stats"><div class="wrap"><div>
- <div class="st"><svg class="i" viewBox="0 0 24 24" stroke-width="1.4"><path d="M5 19c-1-3 0-7 3-10 3-3 7-4 11-4 0 4-1 8-4 11-3 3-7 4-10 3z"/><circle cx="14.5" cy="9.5" r="1.8"/><path d="m5 19-2 2m4-1-3 1m3-1 1-3"/></svg><div><b><i data-n="100">0</i>+</b><span>Projects Delivered</span></div></div>
- <div class="st"><svg class="i" viewBox="0 0 24 24" stroke-width="1.4"><path d="M4 20V14M9 20V11M14 20V8M19 20V4M3 20h18"/><path d="m3 9 5-3 4 2 6-5"/></svg><div><b><i data-n="5">0</i>x</b><span>Average Growth</span></div></div>
- <div class="st"><svg class="i" viewBox="0 0 24 24" stroke-width="1.4"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M6.5 19c0-3 2-5 5.5-5s5.5 2 5.5 5M1.5 17c0-2 1.5-3.5 3.5-3.5M22.5 17c0-2-1.5-3.5-3.5-3.5"/></svg><div><b><i data-n="50">0</i>+</b><span>Happy Clients</span></div></div>
- <div class="st"><svg class="i" viewBox="0 0 24 24" stroke-width="1.4"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1L3.2 9.4l6.1-.8z"/></svg><div><b><i data-n="99">0</i>%</b><span>Client Satisfaction</span></div></div>
-</div></div></div>
- <a href="#about" class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></svg></span>Watch Our Story</a>
- 
-</div>
-
-
+ <div class="hx-stats"><div class="hx-grid">
+  <div class="hx-st"><svg viewBox="0 0 42 42" fill="none"><rect x="6" y="8" width="30" height="27" rx="5" stroke="#F59E0B" stroke-width="2"/><path d="M6 15.5H36" stroke="#F59E0B" stroke-width="2"/><path d="M14 5V9.5M28 5V9.5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><circle cx="13" cy="12" r="1" fill="#F59E0B"/><circle cx="17" cy="12" r="1" fill="#F59E0B"/><path d="M13 23.5L16.5 27L23 20.5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 22H30M25 27H30" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/><path d="M13 30.5H21" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/></svg><div><b><span data-n="100">0</span>+</b><small>Projects Delivered</small></div></div>
+  <div class="hx-st"><svg viewBox="0 0 42 42" fill="none"><path d="M8 23C14 21 22 15 31 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><path d="M25.5 7.5H31.5V13.5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 34V28.5C10 27.9 10.4 27.5 11 27.5H14.5C15.1 27.5 15.5 27.9 15.5 28.5V34" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><path d="M19.5 34V23.5C19.5 22.9 19.9 22.5 20.5 22.5H24C24.6 22.5 25 22.9 25 23.5V34" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><path d="M29 34V17.5C29 16.9 29.4 16.5 30 16.5H33.5C34.1 16.5 34.5 16.9 34.5 17.5V34" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><path d="M6.5 34H37" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg><div><b><span data-n="5">0</span>x</b><small>Average Growth</small></div></div>
+  <div class="hx-st"><svg viewBox="0 0 42 42" fill="none"><circle cx="21" cy="14" r="4.5" stroke="#F59E0B" stroke-width="2"/><path d="M13 33C13 28.5 16.5 25.5 21 25.5C25.5 25.5 29 28.5 29 33" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><circle cx="11.5" cy="17.5" r="3.5" stroke="#F59E0B" stroke-width="1.8"/><path d="M5.5 32.5C5.5 29 8 26.8 11.8 26.8" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/><circle cx="30.5" cy="17.5" r="3.5" stroke="#F59E0B" stroke-width="1.8"/><path d="M36.5 32.5C36.5 29 34 26.8 30.2 26.8" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/></svg><div><b><span data-n="50">0</span>+</b><small>Happy Clients</small></div></div>
+  <div class="hx-st"><svg viewBox="0 0 42 42" fill="none"><path d="M21 6L33 10.5V20.5C33 28.2 27.8 33.8 21 36.5C14.2 33.8 9 28.2 9 20.5V10.5L21 6Z" stroke="#F59E0B" stroke-width="2" stroke-linejoin="round"/><path d="M21 26.5C21 26.5 15.5 22.8 15.5 18.8C15.5 16.9 17 15.5 18.8 15.5C19.9 15.5 20.6 16.1 21 16.8C21.4 16.1 22.1 15.5 23.2 15.5C25 15.5 26.5 16.9 26.5 18.8C26.5 22.8 21 26.5 21 26.5Z" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b><span data-n="99">0</span>%</b><small>Client Satisfaction</small></div></div>
+ </div></div>
+ <div id="storyModal" class="hx-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="hx-mc" id="storyModalCard">
+  <div class="hx-mh"><h3 id="modalTitle">Web Dominators &mdash; Watch Our Story</h3><button type="button" id="closeModalBtn" aria-label="Close">&times;</button></div>
+  <div class="hx-vid"><span><svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3.5l11 6.5-11 6.5V3.5z"/></svg></span><p>Turning Vision Into Digital Dominance</p><small>Discover how our performance-driven campaigns have generated 5x average growth across 100+ brands.</small></div>
+ </div></div>
+</section>
 
 <section id="services"><div class="wrap sv">
  <div class="rv">
@@ -498,7 +583,7 @@ function silkGL(cv,mode){
  function draw(ms){requestAnimationFrame(draw);if(!vis)return;gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
   gl.uniform1f(U('uT'),reduce?5:ms/1000);gl.uniform1f(U('uK'),mx);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
  requestAnimationFrame(draw)}
-silkGL(document.getElementById('c1'),0);silkGL(document.getElementById('c2'),1);
+silkGL(document.getElementById('c2'),1);
 
 // site-wide wave bands that scroll with the page
 (function(){const cv=document.getElementById('bgc'),x=cv.getContext('2d');let W,H,DH=3000;
@@ -512,6 +597,339 @@ silkGL(document.getElementById('c1'),0);silkGL(document.getElementById('c2'),1);
   for(const d of dots){const yc=DH*B[d.b]-scrollY;if(yc<-260||yc>H+260)continue;d.u=(d.u+.0002)%1;
    const[px,py]=pt(d.b,d.u,d.v,t,yc);x.beginPath();x.arc(px,py,1.2,0,6.283);x.fillStyle=`rgba(255,160,10,${.15+.45*Math.pow(Math.sin(t+d.p),2)})`;x.fill()}}
  requestAnimationFrame(draw)})();
+</script>
+
+<script>
+(function () {
+  const canvas = document.getElementById('silkWaveCanvas');
+  const hxRoot = document.getElementById('home');
+  if (!canvas || !window.THREE) { if (hxRoot) hxRoot.classList.add('nogl'); return; }
+  const reduceMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+  window.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.targetX = ((e.clientX - rect.left) / Math.max(rect.width, 1) - 0.5) * 2.0;
+    mouse.targetY = -((e.clientY - rect.top) / Math.max(rect.height, 1) - 0.5) * 2.0;
+  });
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: 'high-performance' }); }
+  catch (err) { hxRoot.classList.add('nogl'); return; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 1.75));
+  renderer.setClearColor(0x000000, 0);
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 20);
+  camera.position.set(0, 0, 5);
+  const uniforms = { uTime: { value: 0 }, uResolution: { value: new THREE.Vector2(1380, 650) }, uMouse: { value: new THREE.Vector2(0, 0) } };
+  const vertexShader = `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = vec4(position, 1.0);
+        }
+      `;
+  const fragmentShader = `
+        precision highp float;
+        varying vec2 vUv;
+        uniform float uTime;
+        uniform vec2 uResolution;
+        uniform vec2 uMouse;
+        float aaStep(float edge, float x, float softness) {
+          float fw = fwidth(x - edge);
+          float w = max(fw * 1.35, softness);
+          return smoothstep(edge - w, edge + w, x);
+        }
+        float cubic1D(float a, float b, float c, float d, float t) {
+          float u = 1.0 - t;
+          return u*u*u*a + 3.0*u*u*t*b + 3.0*u*t*t*c + t*t*t*d;
+        }
+        vec2 hash22(vec2 p) {
+          p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3)));
+          return -1.0 + 2.0 * fract(sin(p) * 43758.5453123);
+        }
+        float smoothGradientNoise(vec2 p) {
+          vec2 i = floor(p);
+          vec2 f = fract(p);
+          vec2 u = f * f * f * (f * (f * 6.0 - 15.0) + 10.0);
+          return mix(
+            mix(dot(hash22(i + vec2(0.0, 0.0)), f - vec2(0.0, 0.0)),
+                dot(hash22(i + vec2(1.0, 0.0)), f - vec2(1.0, 0.0)), u.x),
+            mix(dot(hash22(i + vec2(0.0, 1.0)), f - vec2(0.0, 1.0)),
+                dot(hash22(i + vec2(1.0, 1.0)), f - vec2(1.0, 1.0)), u.x),
+            u.y
+          );
+        }
+        vec2 freeClothField(vec2 p, float t) {
+          float n1 = smoothGradientNoise(p * vec2(1.25, 1.05) - vec2(t * 0.28, t * 0.19));
+          float n2 = smoothGradientNoise(p * vec2(2.10, 1.75) + vec2(-t * 0.34, t * 0.26) + 5.3);
+          return vec2(
+            n1 * 0.038 + n2 * 0.018,
+            n1 * 0.044 - n2 * 0.022
+          );
+        }
+        void main() {
+          vec2 uv = vUv;
+          float aspect = uResolution.x / max(uResolution.y, 1.0);
+          if (aspect < 1.15) {
+            uv.x -= 0.08;
+          }
+          float t = uTime * 0.22;
+          vec2 par = uMouse * 0.022;
+          vec2 globalDrift = vec2(
+            sin(t * 0.75) * 0.024 + cos(t * 0.48) * 0.015,
+            cos(t * 0.62) * 0.022 + sin(t * 0.41) * 0.014
+          );
+          vec2 clothDisp = freeClothField(uv, t);
+          float broadSwellX = sin(uv.y * 1.65 - t * 0.85 + uv.x * 1.15) * 0.022;
+          float broadSwellY = cos(uv.x * 1.75 - t * 0.78 - uv.y * 1.10) * 0.026;
+          vec2 wUv = uv + globalDrift * 0.65 + clothDisp + vec2(broadSwellX, broadSwellY);
+          float floatA = smoothGradientNoise(wUv * vec2(1.4, 1.2) - vec2(t * 0.32, t * 0.22)) * 0.042;
+          float floatB = smoothGradientNoise(wUv * vec2(1.6, 1.3) - vec2(t * 0.38, -t * 0.25) + 4.2) * 0.038;
+          float floatC = smoothGradientNoise(wUv * vec2(1.3, 1.5) - vec2(t * 0.29, t * 0.31) + 8.7) * 0.036;
+          float cpShift1 = sin(t * 0.82) * 0.036 + cos(t * 0.53) * 0.018;
+          float cpShift2 = cos(t * 0.74) * 0.042 - sin(t * 0.47) * 0.020;
+          float cpShift3 = sin(t * 0.68 + 1.4) * 0.034 + cos(t * 0.59) * 0.016;
+          float cpShift4 = cos(t * 0.79 + 2.5) * 0.030;
+          float sweepPhase = fract(t * 0.16);
+          float shimmerCoord = (wUv.x - 0.10) * 0.72 + wUv.y * 0.46;
+          float travelingLight = exp(-pow((shimmerCoord - sweepPhase * 1.35 + 0.18) * 2.2, 2.0))
+                               + exp(-pow((shimmerCoord - fract(sweepPhase + 0.5) * 1.35 + 0.18) * 2.2, 2.0));
+          float plumeStartX = 0.05 + cpShift1 * 0.45 - par.x * 0.35;
+          float txPlume = clamp((wUv.x - plumeStartX) / 0.78, 0.0, 1.0);
+          float plumeTopY = cubic1D(
+            0.44 + cpShift2 * 0.65,
+            0.35 + cpShift1 * 0.75,
+            0.78 + cpShift3 * 0.60,
+            0.90 + cpShift4 * 0.45,
+            txPlume
+          ) + floatC + par.y * 0.35;
+          float dPlume = plumeTopY - wUv.y;
+          float plumeMask = smoothstep(-0.15, 0.17, dPlume)
+                          * smoothstep(0.05, 0.42, wUv.x + (1.0 - wUv.y) * 0.20)
+                          * (1.0 - smoothstep(0.72, 0.96, wUv.x));
+          float plumeFolds = smoothGradientNoise(vec2(wUv.x * 2.6 - wUv.y * 1.8 - t * 0.42, wUv.y * 2.2)) * 0.5 + 0.5;
+          vec3 colPlume = mix(
+            vec3(0.992, 0.978, 0.952),
+            vec3(0.955, 0.855, 0.655),
+            clamp(plumeFolds * 0.65 + smoothstep(0.14, 0.58, wUv.x) * 0.35, 0.0, 1.0)
+          );
+          float veilStartX = 0.13 + cpShift2 * 0.55 - par.x * 0.45;
+          float txVeil = clamp((wUv.x - veilStartX) / 0.72, 0.0, 1.0);
+          float veilCurveY = cubic1D(
+            -0.03 + cpShift1 * 0.60,
+            0.06 + cpShift3 * 0.85,
+            0.75 + cpShift2 * 0.70,
+            0.88 + cpShift4 * 0.55,
+            txVeil
+          ) + floatA + par.y * 0.45;
+          float veilRightDrop = smoothstep(0.76 + cpShift1 * 0.3, 1.02, wUv.x) * (0.15 + cpShift3 * 0.25);
+          float dVeil = (veilCurveY - veilRightDrop) - wUv.y;
+          float veilMask = smoothstep(-0.070, 0.050, dVeil)
+                         * smoothstep(0.11, 0.40, wUv.x + wUv.y * 0.18);
+          float veilPleat1 = sin((wUv.x * 0.75 - wUv.y * 0.52) * 8.5 - t * 0.95 + floatB * 8.0) * 0.5 + 0.5;
+          float veilPleat2 = cos((wUv.x * 0.55 + wUv.y * 0.68) * 6.5 - t * 0.75) * 0.5 + 0.5;
+          vec3 colVeil = mix(
+            vec3(0.988, 0.965, 0.922),
+            vec3(0.935, 0.795, 0.525),
+            clamp(smoothstep(-0.04, 0.18, dVeil) * 0.68 + veilPleat1 * 0.22 + veilPleat2 * 0.10, 0.0, 1.0)
+          );
+          float veilRim = exp(-pow((dVeil - 0.012) * 26.0, 2.0)) * smoothstep(0.26, 0.65, wUv.x);
+          colVeil = mix(colVeil, vec3(1.0, 0.97, 0.88), veilRim * 0.52);
+          float domeStartX = 0.42 + cpShift3 * 0.55 - par.x * 0.55;
+          float txDome = clamp((wUv.x - domeStartX) / (0.58 - cpShift3 * 0.35), 0.0, 1.0);
+          float domeArchY = cubic1D(
+            -0.04 + cpShift2 * 0.50,
+            0.68 + cpShift1 * 0.80,
+            0.96 + cpShift4 * 0.65,
+            0.77 + cpShift2 * 0.55,
+            txDome
+          ) + floatB + par.y * 0.50;
+          float dDome = domeArchY - wUv.y;
+          float domeShoulderWave = smoothGradientNoise(vec2(wUv.y * 1.85 - t * 0.38, t * 0.28)) * 0.042;
+          float domeLeftEdge = (0.54 + cpShift1 * 0.65)
+                             - (0.075 + cpShift2 * 0.25) * sin(clamp(wUv.y, 0.0, 0.92) * 3.14159)
+                             + (1.0 - wUv.y) * 0.025 + domeShoulderWave - par.x * 0.35;
+          float domeMask = aaStep(0.0, dDome, 0.013)
+                         * smoothstep(domeLeftEdge - 0.026, domeLeftEdge + 0.020, wUv.x);
+          float innerStartX = 0.55 + cpShift2 * 0.60;
+          float txInnerDome = clamp((wUv.x - innerStartX) / (0.45 - cpShift2 * 0.40), 0.0, 1.0);
+          float innerDomeCreaseY = cubic1D(
+            0.22 + cpShift3 * 0.70,
+            0.64 + cpShift4 * 0.85,
+            0.83 + cpShift1 * 0.70,
+            0.74 + cpShift3 * 0.55,
+            txInnerDome
+          ) + floatC * 1.15 + par.y * 0.35;
+          float dInnerDome = wUv.y - innerDomeCreaseY;
+          float txWing = clamp((wUv.x - (0.71 + cpShift1 * 0.45)) / 0.29, 0.0, 1.0);
+          float wingTopY = cubic1D(0.75 + cpShift2 * 0.5, 0.82 + cpShift3 * 0.5, 0.81, 0.79 + cpShift1 * 0.4, txWing) + floatA;
+          float wingMask = smoothstep(-0.018, 0.016, wingTopY - wUv.y) * smoothstep(0.70, 0.82, wUv.x);
+          float domeHeightGrad = clamp((wUv.y - 0.30) / 0.56, 0.0, 1.0);
+          vec3 colDomeBase = mix(
+            vec3(0.83, 0.51, 0.065),
+            vec3(0.97, 0.77, 0.32),
+            smoothstep(0.05, 0.88, domeHeightGrad)
+          );
+          float domeClothWave = smoothGradientNoise(wUv * vec2(3.2, 2.5) - vec2(t * 0.45, t * 0.30)) * 0.5 + 0.5;
+          colDomeBase = mix(colDomeBase, vec3(0.99, 0.87, 0.50), domeClothWave * 0.24);
+          float crownCenterX = 0.77 + sin(t * 0.65) * 0.045 + par.x * 0.45;
+          float crownCenterY = 0.79 + cos(t * 0.55) * 0.032 + par.y * 0.45;
+          float crownGlow = exp(-pow((wUv.x - crownCenterX) * 4.2, 2.0) - pow((wUv.y - crownCenterY) * 5.2, 2.0));
+          colDomeBase = mix(colDomeBase, vec3(1.0, 0.96, 0.79), crownGlow * (0.62 + travelingLight * 0.16));
+          float innerCreaseShadow = exp(-pow((dInnerDome + 0.036) * 15.0, 2.0));
+          float innerCreaseRim    = exp(-pow((dInnerDome - 0.004) * 42.0, 2.0));
+          float innerLobeHighlight = exp(-pow((dInnerDome + 0.092) * 10.0, 2.0)) * smoothstep(0.60, 0.95, wUv.x);
+          vec3 colDome = colDomeBase;
+          colDome = mix(colDome, vec3(0.50, 0.26, 0.015), innerCreaseShadow * 0.78);
+          colDome = mix(colDome, vec3(0.99, 0.86, 0.48), innerLobeHighlight * (0.72 + travelingLight * 0.14));
+          colDome = mix(colDome, vec3(1.00, 0.96, 0.82), innerCreaseRim * 0.85);
+          float domeLeftRim = exp(-pow((wUv.x - domeLeftEdge - 0.010) * 42.0, 2.0)) * smoothstep(0.16, 0.84, wUv.y);
+          colDome = mix(colDome, vec3(1.0, 0.95, 0.74), domeLeftRim * 0.76);
+          float sStartX = 0.15 + cpShift2 * 0.65 - par.x * 0.60;
+          float sSpanX  = 0.85 - cpShift2 * 0.45;
+          float txS = clamp((wUv.x - sStartX) / sSpanX, 0.0, 1.0);
+          float freeRibbonWave = sin(txS * 3.1 - t * 0.88 + cpShift1 * 4.0) * 0.022
+                               + cos(txS * 1.9 - t * 0.64) * 0.016;
+          float sRidgeY = cubic1D(
+            -0.02 + cpShift3 * 0.60,
+            0.04 + cpShift1 * 0.95,
+            0.54 + cpShift2 * 0.90,
+            0.64 + cpShift4 * 0.75,
+            txS
+          ) + freeRibbonWave + floatA * 0.95 + par.y * 0.45;
+          float dSRidge = sRidgeY - wUv.y;
+          float cushionBreath = 0.125 + sin(t * 0.72 + txS * 2.4) * 0.018 + cos(t * 0.54 - txS * 1.8) * 0.012;
+          float cushionThickness = (1.0 - smoothstep(0.06, 0.68 + cpShift1 * 0.4, txS)) * cushionBreath
+                                 + smoothstep(0.68 + cpShift1 * 0.4, 1.0, txS) * (0.025 + cpShift3 * 0.12);
+          float lowerLeftCushionY = sRidgeY + cushionThickness;
+          float dCushion = lowerLeftCushionY - wUv.y;
+          float cushionSoftness = mix(0.042, 0.0045, smoothstep(0.16, 0.48, wUv.x));
+          float sRibbonMask = aaStep(0.0, dCushion, cushionSoftness)
+                            * smoothstep(0.14, 0.36, wUv.x + wUv.y * 0.25);
+          float darkWallRightX = (0.675 + cpShift2 * 0.65)
+                               + wUv.y * (0.15 + cpShift3 * 0.25)
+                               + sin(wUv.y * 2.6 - t * 0.82) * 0.022
+                               + smoothGradientNoise(vec2(wUv.y * 2.0, t * 0.35)) * 0.018;
+          float hollowMask = smoothstep(darkWallRightX - 0.010, darkWallRightX + 0.016, wUv.x)
+                           * aaStep(0.0, dSRidge, 0.0045);
+          float hollowCenterX = 0.752 + cpShift2 * 0.55 + sin(t * 0.68) * 0.022;
+          float hollowCenterY = 0.165 + cpShift4 * 0.45 + cos(t * 0.56) * 0.024;
+          float hollowGlow = exp(-pow((wUv.x - hollowCenterX) * 8.2, 2.0) - pow((wUv.y - hollowCenterY) * 3.4, 2.0));
+          vec3 colHollow = mix(
+            vec3(0.84, 0.60, 0.25),
+            vec3(0.99, 0.96, 0.90),
+            clamp(hollowGlow * 0.94 + (1.0 - wUv.y * 1.8) * 0.26, 0.0, 1.0)
+          );
+          float rightDrapeLeftX = (0.842 + cpShift3 * 0.55)
+                                - wUv.y * (0.11 + cpShift1 * 0.20)
+                                + cos(wUv.y * 2.5 - t * 0.78) * 0.020
+                                + smoothGradientNoise(vec2(wUv.y * 2.2, t * 0.32 + 2.0)) * 0.015;
+          float rightDrapeMask = smoothstep(rightDrapeLeftX - 0.040, rightDrapeLeftX + 0.030, wUv.x)
+                               * aaStep(0.0, dSRidge, 0.0045);
+          float rightFoldDiag = (wUv.x - 0.86) * 1.6 + (wUv.y - 0.28) + sin(t * 0.72 + wUv.y * 2.2) * 0.035;
+          float rightAmberStreak = exp(-pow((rightFoldDiag - 0.06) * 8.0, 2.0));
+          float rightDeepShadow  = smoothstep(0.46, 0.0, wUv.y) * smoothstep(0.82, 0.98, wUv.x);
+          vec3 colRightDrape = mix(
+            vec3(0.28, 0.14, 0.012),
+            vec3(0.09, 0.045, 0.004),
+            rightDeepShadow * 0.85
+          );
+          colRightDrape = mix(colRightDrape, vec3(0.79, 0.48, 0.065), rightAmberStreak * (0.75 + travelingLight * 0.15));
+          float cushionPos = clamp((wUv.y - sRidgeY) / max(lowerLeftCushionY - sRidgeY, 0.001), 0.0, 1.0);
+          vec3 colCushion = mix(
+            vec3(0.99, 0.88, 0.54),
+            vec3(0.84, 0.53, 0.075),
+            smoothstep(0.0, 0.88, cushionPos)
+          );
+          float leftWarmBlend = 1.0 - smoothstep(0.18, 0.44, wUv.x);
+          colCushion = mix(colCushion, vec3(0.975, 0.915, 0.775), leftWarmBlend * 0.68);
+          float cushionTopRim = exp(-pow(dCushion * 48.0, 2.0)) * smoothstep(0.24, 0.45, wUv.x) * (1.0 - smoothstep(0.45, 0.68, wUv.x));
+          colCushion = mix(colCushion, vec3(1.0, 0.96, 0.82), cushionTopRim * 0.82);
+          float wallLeftRef = 0.52 + cpShift1 * 0.55 + wUv.y * 0.28;
+          float wallCoord = (wUv.x - wallLeftRef) / max(0.20 - wUv.y * 0.14, 0.045);
+          float wallFlowShift = sin(wUv.y * 2.6 - t * 0.85) * 0.12 + floatB * 1.6;
+          float silkTension1 = exp(-pow((wallCoord - 0.16 + wallFlowShift) * 4.2, 2.0));
+          float silkTension2 = exp(-pow((wallCoord + 0.34 - wallFlowShift * 0.7) * 5.2, 2.0));
+          float silkMicroSheen = smoothGradientNoise(vec2(wallCoord * 4.5 - t * 0.55, wUv.y * 3.8)) * 0.06;
+          vec3 colDarkWall = vec3(0.14, 0.065, 0.005);
+          colDarkWall = mix(colDarkWall, vec3(0.48, 0.26, 0.022), clamp(silkTension1 * 0.86 + silkMicroSheen, 0.0, 1.0));
+          colDarkWall = mix(colDarkWall, vec3(0.72, 0.41, 0.048), silkTension2 * (0.68 + travelingLight * 0.15));
+          float leftSweepGold = smoothstep(0.58, 0.30, wUv.x) * exp(-pow(dSRidge * 15.0, 2.0));
+          colDarkWall = mix(colDarkWall, vec3(0.90, 0.59, 0.10), leftSweepGold * 0.90);
+          colDarkWall = mix(colDarkWall, vec3(0.96, 0.85, 0.60), (1.0 - smoothstep(0.20, 0.38, wUv.x)) * 0.85);
+          float wallRightRim = exp(-pow((wUv.x - darkWallRightX) * 80.0, 2.0)) * smoothstep(0.0, 0.46, wUv.y);
+          colDarkWall = mix(colDarkWall, vec3(0.96, 0.74, 0.28), wallRightRim * 0.78);
+          vec3 colUnderS = mix(colDarkWall, colHollow, hollowMask);
+          colUnderS = mix(colUnderS, colRightDrape, rightDrapeMask);
+          float underSMask = aaStep(0.0, dSRidge, 0.0038);
+          vec3 colSRibbon = mix(colCushion, colUnderS, underSMask);
+          float sCausticRim = exp(-pow(dSRidge * 72.0, 2.0)) * smoothstep(0.20, 0.40, wUv.x);
+          float sWarmGlow   = exp(-pow((dSRidge + 0.009) * 23.0, 2.0));
+          colSRibbon = mix(colSRibbon, vec3(0.99, 0.79, 0.30), sWarmGlow * (0.65 + travelingLight * 0.18));
+          colSRibbon = mix(colSRibbon, vec3(1.00, 0.98, 0.86), sCausticRim * 0.95);
+          float txRightMid = clamp((wUv.x - (0.63 + cpShift2 * 0.5)) / 0.37, 0.0, 1.0);
+          float rightMidFoldY = cubic1D(
+            0.41 + cpShift1 * 0.55,
+            0.58 + cpShift3 * 0.65,
+            0.68 + cpShift4 * 0.60,
+            0.63 + cpShift2 * 0.50,
+            txRightMid
+          ) + floatB * 1.05;
+          float dRightMid = wUv.y - rightMidFoldY;
+          float rightMidRim = exp(-pow(dRightMid * 46.0, 2.0)) * smoothstep(0.64, 0.78, wUv.x);
+          float rightMidAmber = exp(-pow((dRightMid - 0.024) * 18.5, 2.0)) * smoothstep(0.64, 0.78, wUv.x);
+          colDome = mix(colDome, vec3(0.72, 0.41, 0.04), rightMidAmber * 0.66);
+          colDome = mix(colDome, vec3(1.00, 0.95, 0.74), rightMidRim * 0.80);
+          vec3 finalRgb = colPlume;
+          float finalAlpha = plumeMask * 0.52;
+          float veilAlpha = veilMask * smoothstep(0.13, 0.38, wUv.x + wUv.y * 0.15) * 0.84;
+          finalRgb = mix(finalRgb, colVeil, veilAlpha);
+          finalAlpha = max(finalAlpha, veilAlpha);
+          vec3 colWing = mix(vec3(0.95, 0.78, 0.42), vec3(0.99, 0.91, 0.68), smoothstep(0.72, 0.80, wUv.y));
+          finalRgb = mix(finalRgb, colWing, wingMask * 0.88);
+          finalAlpha = max(finalAlpha, wingMask * 0.88);
+          finalRgb = mix(finalRgb, colDome, domeMask);
+          finalAlpha = max(finalAlpha, domeMask);
+          float sRibbonFadeLeft = smoothstep(0.15, 0.38, wUv.x + wUv.y * 0.14);
+          float effectiveSRibbonMask = sRibbonMask * sRibbonFadeLeft;
+          finalRgb = mix(finalRgb, colSRibbon, effectiveSRibbonMask);
+          finalAlpha = max(finalAlpha, effectiveSRibbonMask);
+          float leftSeamlessFade = smoothstep(0.06, 0.34, wUv.x + wUv.y * 0.12);
+          finalAlpha *= leftSeamlessFade;
+          gl_FragColor = vec4(finalRgb, clamp(finalAlpha, 0.0, 1.0));
+        }
+      `;
+  const material = new THREE.ShaderMaterial({ uniforms: uniforms, vertexShader: vertexShader, fragmentShader: fragmentShader, extensions: { derivatives: true }, transparent: true, depthWrite: false });
+  scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material));
+  function resizeRenderer() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    const w = Math.max(rect.width, 1), h = Math.max(rect.height, 1);
+    renderer.setSize(w, h, false);
+    uniforms.uResolution.value.set(w, h);
+  }
+  window.addEventListener('resize', resizeRenderer);
+  resizeRenderer();
+  let visible = true;
+  new IntersectionObserver((e) => { visible = e[0].isIntersecting; }).observe(canvas);
+  const clock = new THREE.Clock();
+  function animateSilkWave() {
+    requestAnimationFrame(animateSilkWave);
+    if (!visible) return;
+    uniforms.uTime.value = reduceMotion ? 6.0 : clock.getElapsedTime();
+    mouse.x += (mouse.targetX - mouse.x) * 0.022;
+    mouse.y += (mouse.targetY - mouse.y) * 0.022;
+    uniforms.uMouse.value.set(mouse.x, mouse.y);
+    renderer.render(scene, camera);
+  }
+  animateSilkWave();
+
+  const modal = document.getElementById('storyModal'), card = document.getElementById('storyModalCard');
+  function openModal() { modal.classList.add('on'); requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('show'))); document.getElementById('closeModalBtn').focus(); }
+  function closeModal() { modal.classList.remove('show'); setTimeout(() => modal.classList.remove('on'), 280); }
+  document.getElementById('watchStoryBtn').addEventListener('click', openModal);
+  document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('on')) closeModal(); });
+})();
 </script>
 </body>
 </html>
